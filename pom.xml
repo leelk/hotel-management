@@ -19,6 +19,7 @@
         <module>room-service</module>
         <module>hotel-service</module>
         <module>api-gatway</module>
+        <module>discovery-service</module>
     </modules>
 
     <properties>

@@ -10,6 +10,7 @@
         <module name="api-gatway" />
         <module name="auth-service" />
         <module name="room-service" />
+        <module name="discovery-service" />
         <module name="booking-service" />
         <module name="hotel-service" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="api-gatway" options="-parameters" />
       <module name="auth-service" options="-parameters" />
       <module name="booking-service" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
       <module name="hotel-service" options="-parameters" />
       <module name="room-service" options="-parameters" />
     </option>

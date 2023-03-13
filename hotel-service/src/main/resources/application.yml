@@ -2,7 +2,6 @@ spring:
   application:
     name: hotel-service
 
-
   datasource:
     url: ${DB_URL:jdbc:mysql://localhost:3306/hotel_service?createDatabaseIfNotExist=true}
     username: ${DB_USERNAME:root}
@@ -15,4 +14,9 @@ spring:
 server:
   port: 8083
 #  servlet:
-#    context-path: /hotel-service
+#    context-path: /hotel-servic
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
