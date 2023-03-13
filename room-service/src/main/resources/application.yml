@@ -13,6 +13,6 @@ spring:
     hibernate:
       ddl-auto: update
 server:
-  servlet:
-    context-path: /room-service
-  port: 8081
+#  servlet:
+#    context-path: /room-service
+  port: 8084

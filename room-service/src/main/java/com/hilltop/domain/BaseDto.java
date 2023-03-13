@@ -2,7 +2,7 @@ package com.hilltop.domain;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hilltop.exception.HotelServiceException;
+import com.hilltop.exception.RoomServiceException;
 
 import java.io.Serializable;
 
@@ -17,7 +17,7 @@ public interface BaseDto extends Serializable {
         try {
             return new ObjectMapper().writeValueAsString(this);
         } catch (JsonProcessingException e) {
-            throw new HotelServiceException("Object to json conversion was failed.", e);
+            throw new RoomServiceException("Object to json conversion was failed.", e);
         }
     }
 
