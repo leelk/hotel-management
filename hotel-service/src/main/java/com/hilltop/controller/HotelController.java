@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/hotel")
+@RequestMapping("/api/v1/hotel")
 @Slf4j
 public class HotelController extends Controller {
     private final HotelService hotelService;
