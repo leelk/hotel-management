@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.UUID;
 
+/**
+ * Hotel Entity
+ */
 @Entity
 @Table(name = "hotel")
 @Getter
@@ -22,20 +25,26 @@ public class Hotel {
     private String id;
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
     private String description;
     @Column(nullable = false)
     private String city;
-    // collect the full address, tp, email, image ulrs.
-
+    @Column(nullable = false)
+    private String address;
+    @Column(nullable = false)
+    private String telephone;
+    private String email;
 
     public Hotel(HotelCreateRequest hotelCreateRequest) {
         this.id = HOTEL_ID_PREFIX + UUID.randomUUID();
         this.name = hotelCreateRequest.getName();
         this.description = hotelCreateRequest.getDescription();
         this.city = hotelCreateRequest.getCity();
+        this.address = hotelCreateRequest.getAddress();
+        this.telephone = hotelCreateRequest.getTelephone();
+        this.email = hotelCreateRequest.getEmail();
     }
 
+    //TODO complete the update method
     public void update(HotelCreateRequest hotelCreateRequest) {
         this.name = hotelCreateRequest.getName();
         this.description = hotelCreateRequest.getDescription();

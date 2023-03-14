@@ -5,6 +5,9 @@ import com.hilltop.enums.ResponseStatusType;
 import com.hilltop.domain.response.ResponseDto;
 import lombok.Getter;
 
+/**
+ * ResponseWrapper
+ */
 @Getter
 public class ResponseWrapper implements BaseDto {
 

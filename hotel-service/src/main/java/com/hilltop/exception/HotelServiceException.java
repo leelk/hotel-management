@@ -1,5 +1,8 @@
 package com.hilltop.exception;
 
+/**
+ * HotelServiceException
+ */
 public class HotelServiceException extends RuntimeException {
 
     /**

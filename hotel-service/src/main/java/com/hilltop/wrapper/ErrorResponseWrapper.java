@@ -4,6 +4,9 @@ import com.hilltop.domain.response.ResponseDto;
 import com.hilltop.enums.ResponseStatusType;
 import lombok.Getter;
 
+/**
+ * ErrorResponseWrapper
+ */
 @Getter
 public class ErrorResponseWrapper extends ResponseWrapper {
 
