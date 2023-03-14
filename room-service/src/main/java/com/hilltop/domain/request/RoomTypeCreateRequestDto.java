@@ -7,6 +7,9 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+/**
+ * RoomTypeCreateRequestDto
+ */
 @Getter
 @Setter
 @AllArgsConstructor

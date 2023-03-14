@@ -1,5 +1,8 @@
 package com.hilltop.exception;
 
+/**
+ * RoomServiceException
+ */
 public class RoomServiceException extends RuntimeException {
 
     /**

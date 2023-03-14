@@ -12,6 +12,9 @@ import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+/**
+ * RoomType Entity
+ */
 @Entity
 @Table(name = "room_type")
 @Getter

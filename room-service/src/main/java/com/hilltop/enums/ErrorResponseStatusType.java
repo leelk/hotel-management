@@ -2,6 +2,9 @@ package com.hilltop.enums;
 
 import lombok.Getter;
 
+/**
+ * ErrorResponseStatusType
+ */
 @Getter
 public enum ErrorResponseStatusType {
 

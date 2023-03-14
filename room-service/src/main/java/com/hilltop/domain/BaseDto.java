@@ -6,6 +6,9 @@ import com.hilltop.exception.RoomServiceException;
 
 import java.io.Serializable;
 
+/**
+ * BaseDto
+ */
 public interface BaseDto extends Serializable {
 
     /**

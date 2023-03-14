@@ -5,6 +5,9 @@ import com.hilltop.enums.ResponseStatusType;
 import com.hilltop.enums.SuccessResponseStatusType;
 import lombok.Getter;
 
+/**
+ * SuccessResponseWrapper
+ */
 @Getter
 public class SuccessResponseWrapper extends ResponseWrapper {
 

@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+/**
+ * RoomTypeCreateResponse
+ */
 @Getter
 @Setter
 public class RoomTypeCreateResponse extends ResponseDto {

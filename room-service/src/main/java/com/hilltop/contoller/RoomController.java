@@ -13,6 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * RoomController
+ */
 @RestController
 @RequestMapping("/api/v1/room")
 @Slf4j
@@ -25,24 +28,33 @@ public class RoomController extends Controller {
         this.roomService = roomService;
     }
 
+    /**
+     * This endpoint used to save a room.
+     *
+     * @param roomCreateRequestDto roomCreateRequestDto
+     * @return roomCreateResponseDto
+     */
     @PostMapping
     public ResponseEntity<ResponseWrapper> saveRoom(@RequestBody RoomCreateRequestDto roomCreateRequestDto) {
         try {
-            //TODO: enable logs.
             //TODO check validations
             var roomCreateResponseDto = roomService.saveRoom(roomCreateRequestDto);
             return getSuccessResponse(roomCreateResponseDto, SuccessResponseStatusType.CREATE_ROOM);
         } catch (RoomServiceException e) {
-            log.error("Saving room was failed.", e);
+            log.error("Saving room was failed for hotel id: {}", roomCreateRequestDto.getHotelId(), e);
             return getInternalServerError();
         }
     }
 
+    /**
+     * This endpoint used to get room by id.
+     *
+     * @param id hotelId
+     * @return roomResponseDto
+     */
     @GetMapping("/{id}")
     public ResponseEntity<ResponseWrapper> getRoom(@PathVariable String id) {
         try {
-            //TODO: enable logs.
-            //TODO check validations
             var room = roomService.getRoom(id);
             var roomResponseDto = new RoomResponseDto(room);
             return getSuccessResponse(roomResponseDto, SuccessResponseStatusType.GET_ROOM);

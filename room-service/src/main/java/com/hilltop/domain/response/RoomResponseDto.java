@@ -4,6 +4,9 @@ import com.hilltop.model.Room;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * RoomResponseDto
+ */
 @Getter
 @Setter
 public class RoomResponseDto extends ResponseDto {

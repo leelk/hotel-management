@@ -2,6 +2,9 @@ package com.hilltop.domain.request;
 
 import com.hilltop.domain.BaseDto;
 
+/**
+ * RequestDto
+ */
 public abstract class RequestDto implements BaseDto {
     /**
      * This method checks all required fields are available for a request.

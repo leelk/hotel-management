@@ -1,5 +1,8 @@
 package com.hilltop.enums;
 
+/**
+ * ResponseStatusType
+ */
 public enum ResponseStatusType {
 
     SUCCESS("SUCCESS"),

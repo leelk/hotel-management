@@ -1,7 +1,6 @@
 package com.hilltop.contoller;
 
 import com.hilltop.configuration.Translator;
-import com.hilltop.domain.request.RoomCreateRequestDto;
 import com.hilltop.domain.request.RoomTypeCreateRequestDto;
 import com.hilltop.domain.response.RoomTypeCreateResponse;
 import com.hilltop.enums.SuccessResponseStatusType;
@@ -15,10 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * RoomTypeController
+ */
 @RestController
 @RequestMapping("/api/v1/room-type")
 @Slf4j
-public class RoomTypeController extends Controller{
+public class RoomTypeController extends Controller {
     private final RoomTypeService roomTypeService;
 
     public RoomTypeController(Translator translator, RoomTypeService roomTypeService) {
@@ -26,10 +28,15 @@ public class RoomTypeController extends Controller{
         this.roomTypeService = roomTypeService;
     }
 
+    /**
+     * This endpoint used to save room type.
+     *
+     * @param roomTypeCreateRequestDto roomTypeCreateRequestDto
+     * @return roomTypeCreateResponse
+     */
     @PostMapping
     public ResponseEntity<ResponseWrapper> saveRoomType(@RequestBody RoomTypeCreateRequestDto roomTypeCreateRequestDto) {
         try {
-            //TODO: enable logs.
             //TODO check validations for enum
             var roomTypeCreateResponseDto = roomTypeService.saveRoomType(roomTypeCreateRequestDto);
             var roomTypeCreateResponse = new RoomTypeCreateResponse(roomTypeCreateResponseDto);
@@ -39,4 +46,5 @@ public class RoomTypeController extends Controller{
             return getInternalServerError();
         }
     }
+    //TODO CRUD IMPLEMENT
 }

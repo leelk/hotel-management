@@ -9,6 +9,9 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Room Entity
+ */
 @Entity
 @Table(name = "room")
 @Getter
