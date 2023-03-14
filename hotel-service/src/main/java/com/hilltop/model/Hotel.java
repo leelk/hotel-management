@@ -1,6 +1,6 @@
 package com.hilltop.model;
 
-import com.hilltop.domain.request.HotelCreateRequest;
+import com.hilltop.domain.request.HotelCreateRequestDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,7 +34,7 @@ public class Hotel {
     private String telephone;
     private String email;
 
-    public Hotel(HotelCreateRequest hotelCreateRequest) {
+    public Hotel(HotelCreateRequestDto hotelCreateRequest) {
         this.id = HOTEL_ID_PREFIX + UUID.randomUUID();
         this.name = hotelCreateRequest.getName();
         this.description = hotelCreateRequest.getDescription();
@@ -45,7 +45,7 @@ public class Hotel {
     }
 
     //TODO complete the update method
-    public void update(HotelCreateRequest hotelCreateRequest) {
+    public void update(HotelCreateRequestDto hotelCreateRequest) {
         this.name = hotelCreateRequest.getName();
         this.description = hotelCreateRequest.getDescription();
         this.city = hotelCreateRequest.getCity();

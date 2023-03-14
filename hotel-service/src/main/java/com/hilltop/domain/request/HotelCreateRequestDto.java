@@ -4,11 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * HotelCreateRequest
+ * HotelCreateRequestDto
  */
 @Getter
 @Setter
-public class HotelCreateRequest extends RequestDto {
+public class HotelCreateRequestDto extends RequestDto {
 
     private String name;
     private String description;

@@ -1,7 +1,7 @@
 package com.hilltop.controller;
 
 import com.hilltop.configuration.Translator;
-import com.hilltop.domain.request.HotelCreateRequest;
+import com.hilltop.domain.request.HotelCreateRequestDto;
 import com.hilltop.domain.response.HotelResponseDto;
 import com.hilltop.enums.ErrorResponseStatusType;
 import com.hilltop.enums.SuccessResponseStatusType;
@@ -34,7 +34,7 @@ public class HotelController extends Controller {
      * @return hotelSaveResponseDto
      */
     @PostMapping
-    public ResponseEntity<ResponseWrapper> saveHotel(@RequestBody HotelCreateRequest hotelCreateRequest) {
+    public ResponseEntity<ResponseWrapper> saveHotel(@RequestBody HotelCreateRequestDto hotelCreateRequest) {
         try {
             if (!hotelCreateRequest.isRequiredAvailable()) {
                 log.error("Missing required filed to save a hotel.");
@@ -95,7 +95,7 @@ public class HotelController extends Controller {
      */
     @PostMapping("/{id}")
     public ResponseEntity<ResponseWrapper> updateHotel(@PathVariable String id,
-                                                       @RequestBody HotelCreateRequest hotelCreateRequest) {
+                                                       @RequestBody HotelCreateRequestDto hotelCreateRequest) {
         try {
             var hotel = hotelService.updateHotel(id, hotelCreateRequest);
             var hotelResponseDto = new HotelResponseDto(hotel);

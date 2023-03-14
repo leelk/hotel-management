@@ -1,6 +1,6 @@
 package com.hilltop.service;
 
-import com.hilltop.domain.request.HotelCreateRequest;
+import com.hilltop.domain.request.HotelCreateRequestDto;
 import com.hilltop.domain.response.HotelCreateResponseDto;
 import com.hilltop.domain.response.HotelListResponseDto;
 import com.hilltop.domain.response.HotelResponseDto;
@@ -35,7 +35,7 @@ public class HotelService {
      * @param hotelCreateRequest hotelCreateRequest
      * @return HotelCreateResponseDto
      */
-    public HotelCreateResponseDto saveHotel(HotelCreateRequest hotelCreateRequest) {
+    public HotelCreateResponseDto saveHotel(HotelCreateRequestDto hotelCreateRequest) {
         try {
             var hotel = new Hotel(hotelCreateRequest);
             log.info("Successfully saved the hotel response: {}", hotelCreateRequest.toLogJson());
@@ -97,7 +97,7 @@ public class HotelService {
      * @return Hotel
      */
     //TODO check this method
-    public Hotel updateHotel(String id, HotelCreateRequest hotelCreateRequest) {
+    public Hotel updateHotel(String id, HotelCreateRequestDto hotelCreateRequest) {
         try {
             var hotelById = getHotelById(id);
             hotelById.update(hotelCreateRequest);
