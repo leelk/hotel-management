@@ -12,12 +12,18 @@ spring:
       routes[1]:
         id: hotel-service
         uri: lb://hotel-service
-        predicates[0]: Path=/api/v1/hotel
+        predicates[0]: Path=/api/v1/hotel/**
 
       routes[2]:
         id: room-service
         uri: lb://room-service
-        predicates[0]: Path=/api/v1/room
+        predicates[0]: Path=/api/v1/room/**
+
+      routes[3]:
+        id: room-service
+        uri: lb://room-service
+        predicates[0]: Path=/api/v1/room-type/**
+
 
 eureka:
   client:
